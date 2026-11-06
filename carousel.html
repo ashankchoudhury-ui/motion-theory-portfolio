@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MT Carousel</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #111; font-family: 'Inter', -apple-system, sans-serif; color: #f5f5f5; }
+  .slide {
+    width: 1080px;
+    height: 1080px;
+    margin: 40px auto;
+    background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .slide-num {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 28px;
+    color: #555;
+    font-weight: 600;
+  }
+  .logo {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .logo span { color: #a3e635; }
+  .slide-label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #a3e635;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .slide h1 {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 32px;
+  }
+  .slide h1 .accent {
+    color: #a3e635;
+  }
+  .slide p {
+    font-size: 32px;
+    line-height: 1.5;
+    color: #aaa;
+    max-width: 800px;
+  }
+  .slide p strong {
+    color: #f5f5f5;
+  }
+  .price {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 24px 0;
+  }
+  .price span {
+    font-size: 28px;
+    color: #888;
+    font-weight: 400;
+  }
+  .features {
+    list-style: none;
+    margin-top: 32px;
+  }
+  .features li {
+    font-size: 28px;
+    color: #ccc;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+  }
+  .features li::before {
+    content: '→ ';
+    color: #a3e635;
+    font-weight: 700;
+  }
+  .cta {
+    text-align: center;
+    min-height: 100vh;
+    justify-content: center;
+  }
+  .cta h1 {
+    font-size: 84px;
+    margin-bottom: 24px;
+  }
+  .cta p {
+    font-size: 36px;
+    text-align: center;
+    margin: 0 auto 48px;
+    max-width: 700px;
+  }
+  .contact-box {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .contact-box p {
+    font-size: 28px;
+    color: #ccc;
+    margin: 8px 0;
+  }
+  .contact-box p strong {
+    color: #a3e635;
+  }
+  .divider {
+    width: 80px;
+    height: 4px;
+    background: #a3e635;
+    margin: 40px 0;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Slide 1: The Problem -->
+<div class="slide">
+  <div class="logo">mt<span>.</span></div>
+  <div class="slide-num">1/6</div>
+  <div class="slide-label">The Problem</div>
+  <h1>Your product looks <span class="accent">cheap</span> online.</h1>
+  <p>Bad photos kill sales. Customers scroll past. Your product is good — but your photos make it look like a knockoff.</p>
+  <div class="divider"></div>
+  <p>Phone photos. Bad lighting. Messy backgrounds. <strong>No one trusts it.</strong></p>
+</div>
+
+<!-- Slide 2: The Fix -->
+<div class="slide">
+  <div class="logo">mt<span>.</span></div>
+  <div class="slide-num">2/6</div>
+  <div class="slide-label">The Fix</div>
+  <h1>We turn <span class="accent">1 photo</span> into a full brand shoot.</h1>
+  <p>Send us one product photo. We create <strong>8 professional variations</strong> with premium backgrounds, dramatic lighting, cinematic quality.</p>
+  <div class="divider"></div>
+  <p>Exact product preserved. <strong>No AI brainrot.</strong> Studio-quality, every time.</p>
+</div>
+
+<!-- Slide 3: Photo Set Pricing -->
+<div class="slide">
+  <div class="logo">mt<span>.</span></div>
+  <div class="slide-num">3/6</div>
+  <div class="slide-label">Photo Set</div>
+  <h1>Photo Set</h1>
+  <div class="price">₹299 <span>/ 5 variations</span></div>
+  <ul class="features">
+    <li>5 premium background variations</li>
+    <li>Exact product preserved</li>
+    <li>PNG + JPG delivery</li>
+    <li>24-hour turnaround</li>
+  </ul>
+</div>
+
+<!-- Slide 4: Video Ad Pricing -->
+<div class="slide">
+  <div class="logo">mt<span>.</span></div>
+  <div class="slide-num">4/6</div>
+  <div class="slide-label">Video Ad</div>
+  <h1>Video Ad</h1>
+  <div class="price">₹499 <span>/ 15s video</span></div>
+  <ul class="features">
+    <li>15-second cinematic product film</li>
+    <li>Text overlays & animations</li>
+    <li>Music sync</li>
+    <li>9:16 format (Reels/TikTok)</li>
+  </ul>
+</div>
+
+<!-- Slide 5: Bundle + Retainer -->
+<div class="slide">
+  <div class="logo">mt<span>.</span></div>
+  <div class="slide-num">5/6</div>
+  <div class="slide-label">Best Value</div>
+  <h1>Bundle Deal</h1>
+  <div class="price">₹699 <span>/ photo + video</span></div>
+  <p>Photo set (₹299) + Video ad (₹499) = ₹798</p>
+  <p><strong>Get both for ₹699. Save ₹99.</strong></p>
+  <div class="divider"></div>
+  <div class="price" style="font-size: 48px;">₹1,499 <span>/ month retainer</span></div>
+  <p>20 photos + 4 video ads every month. Consistent brand style. Priority delivery.</p>
+</div>
+
+<!-- Slide 6: CTA -->
+<div class="slide cta">
+  <div class="logo">mt<span>.</span></div>
+  <div class="slide-num">6/6</div>
+  <div class="slide-label">Start Today</div>
+  <h1>First piece <span class="accent">FREE.</span></h1>
+  <p>No risk. No commitment. Send us one product photo — we'll make it look expensive.</p>
+  <div class="contact-box">
+    <p><strong>WhatsApp</strong> — 7002997271</p>
+    <p><strong>Email</strong> — motiontheorysm@gmail.com</p>
+    <p><strong>Instagram</strong> — @creativemotiontheory</p>
+  </div>
+  <p style="margin-top: 32px; font-size: 24px; color: #888;">Portfolio: motion-theory-portfolio.vercel.app</p>
+</div>
+
+</body>
+</html>
