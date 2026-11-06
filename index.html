@@ -136,15 +136,12 @@
     transition: transform 0.3s, border-color 0.3s;
   }
   .portfolio-item:hover { transform: translateY(-4px); border-color: var(--accent); }
-  .portfolio-thumb {
-    aspect-ratio: 1; background: #111;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-muted); font-size: 14px;
-    position: relative; overflow: hidden;
-  }
-  .portfolio-thumb::after {
-    content: 'Coming Soon'; position: absolute;
-    font-size: 12px; color: var(--text-muted); opacity: 0.5;
+  .portfolio-item img {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    display: block;
+    background: #111;
   }
   .portfolio-info { padding: 20px; }
   .portfolio-info h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
@@ -274,38 +271,59 @@
 
   <div class="portfolio-grid">
     <div class="portfolio-item">
-      <div class="portfolio-thumb"></div>
+      <img src="photo_01_front.jpg" alt="Aesop Hwyl - Front view">
       <div class="portfolio-info">
-        <h3>Product Set — Marble</h3>
-        <p>5 variations • Premium marble backgrounds</p>
+        <h3>Aesop Hwyl — Front View</h3>
+        <p>Photo Set 01/08 • Cinematic product shot</p>
       </div>
     </div>
     <div class="portfolio-item">
-      <div class="portfolio-thumb"></div>
+      <img src="photo_02_34angle.jpg" alt="Aesop Hwyl - 3/4 angle">
       <div class="portfolio-info">
-        <h3>Product Set — Dark Studio</h3>
-        <p>5 variations • Charcoal & rim lighting</p>
+        <h3>Aesop Hwyl — 3/4 Angle</h3>
+        <p>Photo Set 02/08 • Orbit angle</p>
       </div>
     </div>
     <div class="portfolio-item">
-      <div class="portfolio-thumb"></div>
+      <img src="photo_03_rear.jpg" alt="Aesop Hwyl - Rear view">
       <div class="portfolio-info">
-        <h3>Product Set — Luxury</h3>
-        <p>5 variations • Black marble & gold</p>
+        <h3>Aesop Hwyl — Rear View</h3>
+        <p>Photo Set 03/08 • Back detail</p>
       </div>
     </div>
     <div class="portfolio-item">
-      <div class="portfolio-thumb"></div>
+      <img src="photo_04_cap.jpg" alt="Aesop Hwyl - Cap macro">
       <div class="portfolio-info">
-        <h3>Video Ad — 30s Promo</h3>
-        <p>Full product story with transitions</p>
+        <h3>Aesop Hwyl — Cap Macro</h3>
+        <p>Photo Set 04/08 • Detail shot</p>
       </div>
     </div>
     <div class="portfolio-item">
-      <div class="portfolio-thumb"></div>
+      <img src="photo_05_front.jpg" alt="Aesop Hwyl - Front view 2">
       <div class="portfolio-info">
-        <h3>Brand Kit</h3>
-        <p>Consistent visual identity across platforms</p>
+        <h3>Aesop Hwyl — Front View</h3>
+        <p>Photo Set 05/08 • Alternate angle</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="photo_06_orbit.jpg" alt="Aesop Hwyl - Orbit">
+      <div class="portfolio-info">
+        <h3>Aesop Hwyl — Orbit Shot</h3>
+        <p>Photo Set 06/08 • Dynamic angle</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="photo_07_macro.jpg" alt="Aesop Hwyl - Macro">
+      <div class="portfolio-info">
+        <h3>Aesop Hwyl — Macro Detail</h3>
+        <p>Photo Set 07/08 • Close-up</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="photo_08_final.jpg" alt="Aesop Hwyl - Final">
+      <div class="portfolio-info">
+        <h3>Aesop Hwyl — Final Shot</h3>
+        <p>Photo Set 08/08 • Hero image</p>
       </div>
     </div>
   </div>
