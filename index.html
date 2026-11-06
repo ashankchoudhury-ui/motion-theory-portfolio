@@ -125,6 +125,97 @@
     color: var(--text-muted);
   }
 
+  /* Carousel Gallery */
+  .carousel-section {
+    max-width: 800px;
+    margin: 0 auto 64px;
+    position: relative;
+  }
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .carousel-slide {
+    min-width: 100%;
+    aspect-ratio: 9/16;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+  }
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .slide-placeholder {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .slide-placeholder span {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.8);
+    color: var(--text);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s;
+  }
+  .carousel-btn:hover {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+  }
+  .carousel-btn.prev { left: 16px; }
+  .carousel-btn.next { right: 16px; }
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .carousel-dot.active {
+    background: var(--accent);
+    width: 24px;
+    border-radius: 4px;
+  }
+  .carousel-counter {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
   /* Portfolio grid */
   .portfolio-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -269,63 +360,24 @@
     </div>
   </div>
 
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="studio_01_front.jpg" alt="Aesop Hwyl - Front view">
-      <div class="portfolio-info">
-        <h3>Aesop Hwyl — Front View</h3>
-        <p>Photo Set 01/08 • White studio</p>
+  <!-- Photo Carousel -->
+  <div class="carousel-section">
+    <div class="carousel-container">
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide"><div class="slide-placeholder">Studio Photo 01<br><span>Marble Background</span></div></div>
+        <div class="carousel-slide"><div class="slide-placeholder">Studio Photo 02<br><span>Dark Wood</span></div></div>
+        <div class="carousel-slide"><div class="slide-placeholder">Studio Photo 03<br><span>Black Stone</span></div></div>
+        <div class="carousel-slide"><div class="slide-placeholder">Studio Photo 04<br><span>Light Stone</span></div></div>
+        <div class="carousel-slide"><div class="slide-placeholder">Studio Photo 05<br><span>Concrete</span></div></div>
+        <div class="carousel-slide"><div class="slide-placeholder">Studio Photo 06<br><span>Dark Studio</span></div></div>
+        <div class="carousel-slide"><div class="slide-placeholder">Studio Photo 07<br><span>Gradient Gray</span></div></div>
+        <div class="carousel-slide"><div class="slide-placeholder">Studio Photo 08<br><span>Gold Marble</span></div></div>
       </div>
+      <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
     </div>
-    <div class="portfolio-item">
-      <img src="studio_02_34angle.jpg" alt="Aesop Hwyl - 3/4 angle">
-      <div class="portfolio-info">
-        <h3>Aesop Hwyl — 3/4 Angle</h3>
-        <p>Photo Set 02/08 • White studio</p>
-      </div>
-    </div>
-    <div class="portfolio-item">
-      <img src="studio_03_rear.jpg" alt="Aesop Hwyl - Rear view">
-      <div class="portfolio-info">
-        <h3>Aesop Hwyl — Rear View</h3>
-        <p>Photo Set 03/08 • Back detail</p>
-      </div>
-    </div>
-    <div class="portfolio-item">
-      <img src="studio_04_angle.jpg" alt="Aesop Hwyl - Angle">
-      <div class="portfolio-info">
-        <h3>Aesop Hwyl — Detail Angle</h3>
-        <p>Photo Set 04/08 • White studio</p>
-      </div>
-    </div>
-    <div class="portfolio-item">
-      <img src="studio_05_front2.jpg" alt="Aesop Hwyl - Front view 2">
-      <div class="portfolio-info">
-        <h3>Aesop Hwyl — Front View</h3>
-        <p>Photo Set 05/08 • Alternate angle</p>
-      </div>
-    </div>
-    <div class="portfolio-item">
-      <img src="studio_06_front3.jpg" alt="Aesop Hwyl - Front view 3">
-      <div class="portfolio-info">
-        <h3>Aesop Hwyl — Front View</h3>
-        <p>Photo Set 06/08 • Hero angle</p>
-      </div>
-    </div>
-    <div class="portfolio-item">
-      <img src="studio_07_cap.jpg" alt="Aesop Hwyl - Cap macro">
-      <div class="portfolio-info">
-        <h3>Aesop Hwyl — Cap Macro</h3>
-        <p>Photo Set 07/08 • Detail shot</p>
-      </div>
-    </div>
-    <div class="portfolio-item">
-      <img src="studio_08_front4.jpg" alt="Aesop Hwyl - Front view 4">
-      <div class="portfolio-info">
-        <h3>Aesop Hwyl — Front View</h3>
-        <p>Photo Set 08/08 • Final angle</p>
-      </div>
-    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <div class="carousel-counter"><span id="currentSlide">1</span> / 8</div>
   </div>
 </section>
 
@@ -409,6 +461,40 @@
 <footer>
   © 2026 MT Visuals. All rights reserved.
 </footer>
+
+<script>
+let currentSlide = 0;
+const totalSlides = 8;
+const track = document.getElementById('carouselTrack');
+const dotsContainer = document.getElementById('carouselDots');
+
+function initDots() {
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function moveSlide(direction) {
+  currentSlide += direction;
+  if (currentSlide >= totalSlides) currentSlide = 0;
+  if (currentSlide < 0) currentSlide = totalSlides - 1;
+  goToSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  track.style.transform = `translateX(-${index * 100}%)`;
+  document.getElementById('currentSlide').textContent = index + 1;
+  document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+initDots();
+</script>
 
 </body>
 </html>
